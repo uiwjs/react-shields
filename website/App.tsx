@@ -11,6 +11,16 @@ const App: React.FC = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div className="App-list">
+          <div className="title">Github Social</div>
+          <Github.Social user="jaywcjlove" repo="uiw" href="https://github.com/jaywcjlove" />
+          <Github user="jaywcjlove" repo="awesome-mac">
+            <Github.Social type="forks" />
+            <Github.Social type="stars" />
+            <Github.Social type="watchers" />
+            <Github.Social type="followers" />
+          </Github>
+        </div>
+        <div className="App-list">
           <div className="title">Github Issue</div>
           <Github.Issues user="uiwjs" repo="uiw" />
           <Github user="uiwjs" repo="uiw">

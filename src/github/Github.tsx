@@ -7,6 +7,7 @@ import Activity from './Activity';
 import Version from './Version';
 import License from './License';
 import Analysis from './Analysis';
+import Social from './Social';
 
 export interface GithubProps extends BaseProps {}
 
@@ -18,6 +19,7 @@ export default class Github extends Component<GithubProps> {
   static Version = Version;
   static License = License;
   static Analysis = Analysis;
+  static Social = Social;
   render() {
     return (
       <>

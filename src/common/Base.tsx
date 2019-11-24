@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 export interface BaseProps {
   platform?: 'github';
   type?: string;
-  label?: string;
   user?: string;
   repo?: string;
   base?: string;
@@ -23,12 +22,10 @@ export default class Base<T> extends Component<BaseProps & T, BaseState & T> {
   }
   getUrl = () => '';
   render() {
-    const { href } = this.props;
+    const { href } = this.state;
     if (href) {
-      <a href={href}><img src={this.getUrl()} /></a>
+      return <a href={href}> <img src={this.getUrl()} /> </a>;
     }
-    return (
-      <img src={this.getUrl()} />
-    );
+    return <img src={this.getUrl()} />;
   }
 }

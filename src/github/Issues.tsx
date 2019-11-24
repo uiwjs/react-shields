@@ -59,6 +59,7 @@ export interface IssueProps extends BaseProps {
    * /github/:issueKind/detail/:property/:user/:repo/:number
    */
   number?: string;
+  label?: string;
 }
 
 export default class Issue extends Base<IssueProps> {

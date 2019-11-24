@@ -17,7 +17,7 @@ export interface CodacyProps extends BaseProps {
 
 export default class Codacy extends Base<CodacyProps> {
   constructor(props: CodacyProps) {
-    super({...props}, { }, { platform: 'coveralls' });
+    super(props, { }, { platform: 'coveralls' });
   };
   getUrl = () => {
     const { base, platform, projectId, branch } = this.state;

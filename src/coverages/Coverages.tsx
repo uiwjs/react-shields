@@ -23,7 +23,7 @@ export interface CoveragesProps extends BaseProps {
 
 export default class Coverages extends Base<CoveragesProps> {
   constructor(props: CoveragesProps) {
-    super({...props}, { type: 'github' }, { platform: 'coveralls' });
+    super(props, { type: 'github' }, { platform: 'coveralls' });
   };
   getUrl = () => {
     const { type, platform, user, repo, base } = this.state;

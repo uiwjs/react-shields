@@ -33,27 +33,31 @@ export interface ActivityProps extends BaseProps {
    * `/github/release-date-pre/:user/:repo`
    * GitHub (Pre-)Release Date:  GitHub (Pre-)Release Date badge 
    */
-  type?: 'commits-since' | 'variant' | 'last-commit' | 'release-date' | 'release-date-pre';
+  type?: 'commit-activity' | 'commits-since' | 'variant' | 'last-commit' | 'release-date' | 'release-date-pre';
   variant?: string;
-  version?: string;
+  interval?: 'y' | 'm' | 'w';
+  version?: 'contributors' | 'contributors-anon';
   branch?: string;
 }
 
 export default class Activity extends Base<ActivityProps> {
   constructor(props: ActivityProps) {
-    super({ platform: 'github', type: 'commits-since' }, props);
+    super({ platform: 'github', type: 'commits-since', ...props });
   };
   getUrl = () => {
-    const { type, platform, user, repo, base, variant, version, branch } = this.state;
+    const { type, platform, user, repo, base, interval, variant, version, branch } = this.state;
     if (platform !== 'github') return '';
-    if (type === 'commits-since') {
+    if (type === 'commits-since' && version && branch) {
       return [base, platform, type, user, repo, version, branch].join('/');
+    }
+    if (type === 'commit-activity' && interval) {
+      return [base, platform, type, interval, user, repo].join('/');
     }
     if (type === 'variant' && variant) {
       return [base, platform, type, variant, user, repo].join('/');
     }
     if (type === 'last-commit') {
-      return branch ? [base, platform, type, variant, user, repo, branch].join('/') : [base, platform, type, variant, user, repo].join('/');
+      return branch ? [base, platform, type, user, repo, branch].join('/') : [base, platform, type, user, repo].join('/');
     }
     if (type && /^release\-(date|date\-pre)/.test(type)) {
       return [base, platform, type, user, repo].join('/');

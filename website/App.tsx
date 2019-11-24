@@ -8,8 +8,8 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <div>
-          <div>Github Issue</div>
+        <div className="App-list">
+          <div className="title">Github Issue</div>
           <Github.Issues user="uiwjs" repo="uiw" />
           <Github user="uiwjs" repo="uiw">
             <Github.Issues type="issues" />
@@ -26,15 +26,34 @@ const App: React.FC = () => {
             <Github.Issues type="issues-pr-raw" label="bug" />
           </Github>
         </div>
-        <div>
-          <div>Github Size</div>
+        <div className="App-list">
+          <div className="title">Github Downloads</div>
+          <Github.Downloads user="uiwjs" repo="uiw" />
+          <Github user="uiwjs" repo="uiw">
+            <Github.Downloads tag="v3.9.0" total={false}/>
+            <Github.Downloads user="jaywcjlove" repo="linux-command" type="downloads-pre" tag="v1.2.2" path="linux-command.docset.zip" />
+            <Github.Downloads tag="v3.9.0"/>
+            <Github.Downloads tag="v3.9.0"/>
+          </Github>
+        </div>
+        <div className="App-list">
+          <div className="title">Github Activity</div>
+          <Github.Activity user="uiwjs" repo="uiw" type="commit-activity" interval="y" />
+          <Github user="uiwjs" repo="uiw">
+            <Github.Activity type="last-commit" />
+            <Github.Activity type="last-commit" branch="gh-pages" />
+            <Github.Activity type="release-date" />
+            <Github.Activity type="release-date-pre" />
+          </Github>
+        </div>
+        <div className="App-list">
+          <div className="title">Github Size</div>
           <Github.Size user="uiwjs" repo="uiw" />
           <Github user="uiwjs" repo="uiw">
             <Github.Size />
             <Github.Size type="repo-size" />
-            <Github.Size type="size" />
+            <Github.Size type="size" path="src/index.ts" />
           </Github>
-
         </div>
       </header>
     </div>

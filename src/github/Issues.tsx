@@ -3,20 +3,49 @@ import Base, { BaseProps} from '../common/Base';
 
 export interface IssueProps extends BaseProps {
   /**
-   * /github/:issueKind/detail/:property/:user/:repo/:number
-   * /github/issues/:user/:repo
-   * /github/issues-raw/:user/:repo
-   * /github/issues/:user/:repo/:label
-   * /github/issues-raw/:user/:repo/:label
-   * /github/issues-closed/:user/:repo
-   * /github/issues-closed-raw/:user/:repo
-   * /github/issues-pr/:user/:repo
-   * /github/issues-pr-raw/:user/:repo
-   * /github/issues-pr-closed/:user/:repo
-   * /github/issues-pr-closed-raw/:user/:repo
-   * /github/issues-pr/:user/:repo/:label
-   * /github/issues-pr-raw/:user/:repo/:label
-   * /github/labels/:user/:repo/:name
+   * Github Issue
+   * 
+   * `/github/:issueKind/detail/:property/:user/:repo/:number`  
+   * GitHub issue/pull request detail: GitHub issue/pull request detail badge  
+   * 
+   * `/github/issues/:user/:repo`  
+   * GitHub issues:  GitHub issues badge 
+   * 
+   * `/github/issues-raw/:user/:repo`  
+   * GitHub issues:  GitHub issues badge 
+   * 
+   * `/github/issues/:user/:repo/:label`  
+   * GitHub issues by-label: GitHub issues by-label badge  
+   * 
+   * `/github/issues-raw/:user/:repo/:label`  
+   * GitHub issues by-label: GitHub issues by-label badge  
+   * 
+   * `/github/issues-closed/:user/:repo`  
+   * GitHub closed issues: GitHub closed issues badge  
+   * 
+   * `/github/issues-closed-raw/:user/:repo`  
+   * GitHub closed issues: GitHub closed issues badge  
+   * 
+   * `/github/issues-pr/:user/:repo`  
+   * GitHub pull requests: GitHub pull requests badge  
+   * 
+   * `/github/issues-pr-raw/:user/:repo`  
+   * GitHub pull requests: GitHub pull requests badge  
+   * 
+   * `/github/issues-pr-closed/:user/:repo`  
+   * GitHub closed pull requests:  GitHub closed pull requests badge 
+   * 
+   * `/github/issues-pr-closed-raw/:user/:repo`  
+   * GitHub closed pull requests:  GitHub closed pull requests badge 
+   * 
+   * `/github/issues-pr/:user/:repo/:label`  
+   * GitHub pull requests by-label:  GitHub pull requests by-label badge 
+   * 
+   * `/github/issues-pr-raw/:user/:repo/:label`  
+   * GitHub pull requests by-label:  GitHub pull requests by-label badge 
+   * 
+   * `/github/labels/:user/:repo/:name`  
+   * GitHub labels:  GitHub labels badge 
    */
   type?: 'issueKind' | 'issues' | 'issues-raw' | 'issues-closed'
     | 'issues-closed-raw' | 'issues-pr' | 'issues-pr-raw' 
@@ -34,7 +63,7 @@ export interface IssueProps extends BaseProps {
 
 export default class Issue extends Base<IssueProps> {
   constructor(props: IssueProps) {
-    super({ platform: 'github', type: 'issues' }, props);
+    super({ platform: 'github', type: 'issues', ...props });
   };
   getUrl = () => {
     const { type, platform, property, user, repo, label, base } = this.state;

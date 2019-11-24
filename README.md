@@ -33,15 +33,6 @@ function Demo() {
         <Github.Issues type="issues" />
         <Github.Issues type="issues-raw" />
         <Github.Issues type="issues-closed" />
-        <Github.Issues type="issues-closed-raw" />
-        <Github.Issues type="issues-pr" />
-        <Github.Issues type="issues-pr-raw" />
-        <Github.Issues type="issues-pr-closed" />
-        <Github.Issues type="issues-pr-closed-raw" />
-        <Github.Issues type="issues" label="bug" />
-        <Github.Issues type="issues-raw" label="bug" />
-        <Github.Issues type="issues-pr" label="bug" />
-        <Github.Issues type="issues-pr-raw" label="bug" />
       </Github>
       <Github.Size user="uiwjs" repo="uiw" />
       <Github user="uiwjs" repo="uiw">
@@ -52,6 +43,50 @@ function Demo() {
     </>
   );
 }
+```
+
+### Github.Issues
+
+```jsx
+<Github.Issues user="uiwjs" repo="uiw" />
+<Github user="uiwjs" repo="uiw">
+  <Github.Issues type="issues" />
+  <Github.Issues type="issues-raw" />
+  <Github.Issues type="issues-closed" />
+  <Github.Issues type="issues-closed-raw" />
+  <Github.Issues type="issues-pr" />
+  <Github.Issues type="issues-pr-raw" />
+  <Github.Issues type="issues-pr-closed" />
+  <Github.Issues type="issues-pr-closed-raw" />
+  <Github.Issues type="issues" label="bug" />
+  <Github.Issues type="issues-raw" label="bug" />
+  <Github.Issues type="issues-pr" label="bug" />
+  <Github.Issues type="issues-pr-raw" label="bug" />
+</Github>
+```
+
+### Github.Size
+
+```jsx
+<Github.Size user="uiwjs" repo="uiw" />
+<Github user="uiwjs" repo="uiw">
+  <Github.Size />
+  <Github.Size type="repo-size" />
+  <Github.Size type="size" />
+</Github>
+```
+
+### Github.Downloads
+
+```jsx
+<Github.Downloads user="uiwjs" repo="uiw" />
+<Github user="uiwjs" repo="uiw">
+  <Github.Downloads />
+  <Github.Downloads total={false}/>
+  <Github.Downloads type="downloads-pre" />
+  <Github.Downloads total={false} tag="v3.9.0"/>
+  <Github.Downloads tag="v3.9.0"/>
+</Github>
 ```
 
 ## Development

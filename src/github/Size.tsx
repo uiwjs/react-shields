@@ -3,9 +3,11 @@ import Base, { BaseProps } from '../common/Base';
 
 export interface SizeProps extends BaseProps {
   /**
-   * /github/languages/code-size/:user/:repo
-   * /github/repo-size/:user/:repo
-   * /github/size/:user/:repo/:path*
+   * Github Size
+   * 
+   * /github/languages/code-size/:user/:repo  
+   * /github/repo-size/:user/:repo  
+   * /github/size/:user/:repo/:path*  
    */
   type?: 'languages' | 'repo-size' | 'size';
   /**
@@ -17,13 +19,14 @@ export interface SizeProps extends BaseProps {
 
 export default class Size extends Base<SizeProps> {
   constructor(props: SizeProps) {
-    super({ platform: 'github', type: 'languages' }, props);
-    console.log('Size:', props);
+    super({ platform: 'github', type: 'languages', ...props });
+    console.log('~~~~::::', { platform: 'github', type: 'languages', ...props })
   };
 
   getUrl = () => {
-    const { type, platform, user, repo, base } = this.state;
+    const { type, platform, user, repo, base, path } = this.state;
     if (platform !== 'github') return '';
+    console.log('this.state:', this.state)
     /**
      * /github/languages/code-size/:user/:repo
      */
@@ -39,8 +42,8 @@ export default class Size extends Base<SizeProps> {
     /**
      * /github/size/:user/:repo/:path*
      */
-    if (type === 'size') {
-      return [base, platform, type, user, repo].join('/');
+    if (type === 'size' && path) {
+      return [base, platform, type, user, repo, path].join('/');
     }
     return '';
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Base, { BaseProps} from '../common/Base';
 
-export interface LicenseProps extends BaseProps {
+export interface CoveragesProps extends BaseProps {
   /**
    * Code Coverage
    * 
@@ -21,8 +21,8 @@ export interface LicenseProps extends BaseProps {
   branch?: string;
 }
 
-export default class License extends Base<LicenseProps> {
-  constructor(props: LicenseProps) {
+export default class Coverages extends Base<CoveragesProps> {
+  constructor(props: CoveragesProps) {
     super({...props}, { type: 'github' }, { platform: 'coveralls' });
   };
   getUrl = () => {

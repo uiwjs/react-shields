@@ -135,6 +135,26 @@ function Demo() {
 </Github>
 ```
 
+### Coverage.Coverages
+
+```jsx
+<Coverage.Coverages user="jaywcjlove" repo="hotkeys" />
+<Coverage user="jaywcjlove" repo="hotkeys">
+  <Coverage.Coverages type="github"  />
+  <Coverage.Coverages type="github" />
+</Coverage>
+```
+
+### Coverage.Codacy
+
+```jsx
+<Coverage.Codacy projectId="1c524e61cd8640e79b80d406eda8754b" />
+<Coverage user="jaywcjlove" repo="hotkeys">
+  <Coverage.Codacy projectId="1c524e61cd8640e79b80d406eda8754b" branch="master" />
+  <Coverage.Codacy projectId="1c524e61cd8640e79b80d406eda8754b" />
+</Coverage>
+```
+
 ## Development
 
 ```bash

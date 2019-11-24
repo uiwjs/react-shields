@@ -1,11 +1,13 @@
 import React, { Component, ReactElement } from 'react';
 import { BaseProps } from '../common/Base';
 import Coverages from './Coverages';
+import Codacy from './Codacy';
 
-export interface GithubProps extends BaseProps {}
+export interface CoverageProps extends BaseProps {}
 
-export default class Github extends Component<GithubProps> {
+export default class Coverage extends Component<CoverageProps> {
   static Coverages = Coverages;
+  static Codacy = Codacy;
   render() {
     return (
       <>

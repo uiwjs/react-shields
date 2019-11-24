@@ -103,6 +103,14 @@ const App: React.FC = () => {
             <Coverage.Coverages type="github" />
           </Coverage>
         </div>
+        <div className="App-list">
+          <div className="title">Codacy Coverages</div>
+          <Coverage.Codacy projectId="1c524e61cd8640e79b80d406eda8754b" />
+          <Coverage user="jaywcjlove" repo="hotkeys">
+            <Coverage.Codacy projectId="1c524e61cd8640e79b80d406eda8754b" branch="master" />
+            <Coverage.Codacy projectId="1c524e61cd8640e79b80d406eda8754b" />
+          </Coverage>
+        </div>
       </header>
     </div>
   );

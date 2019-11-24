@@ -1,7 +1,7 @@
 {
   "name": "react-shields.io",
   "version": "1.0.1",
-  "description": "",
+  "description": "Shields.io for react component, Quality metadata badges for open source projects.",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "scripts": {
@@ -18,9 +18,10 @@
     "ts:watch": "tsbb watch --env-name esm:dev --env-name cjs --target react",
     "ts:build": "tsbb build --target react"
   },
+  "homepage": "https://uiwjs.github.io/react-shields",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kktjs/kkt.git"
+    "url": "https://github.com/uiwjs/react-shields"
   },
   "author": "",
   "license": "MIT",
@@ -41,7 +42,7 @@
     "@types/classnames": "^2.2.9",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
-    "kkt": "5.0.0-alpha.10"
+    "kkt": "^5.0.0-alpha.12"
   },
   "browserslist": {
     "production": [

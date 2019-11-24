@@ -1,6 +1,6 @@
 {
   "name": "@uiw/react-shields",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Shields.io for react component, Quality metadata badges for open source projects.",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",

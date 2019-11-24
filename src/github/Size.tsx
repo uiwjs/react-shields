@@ -20,13 +20,11 @@ export interface SizeProps extends BaseProps {
 export default class Size extends Base<SizeProps> {
   constructor(props: SizeProps) {
     super({ platform: 'github', type: 'languages', ...props });
-    console.log('~~~~::::', { platform: 'github', type: 'languages', ...props })
   };
 
   getUrl = () => {
     const { type, platform, user, repo, base, path } = this.state;
     if (platform !== 'github') return '';
-    console.log('this.state:', this.state)
     /**
      * /github/languages/code-size/:user/:repo
      */

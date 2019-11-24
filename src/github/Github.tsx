@@ -3,6 +3,7 @@ import Issues from './Issues';
 import Size from './Size';
 import Downloads from './Downloads';
 import Activity from './Activity';
+import Version from './Version';
 import { BaseProps } from '../common/Base';
 
 export interface GithubProps extends BaseProps {}
@@ -12,6 +13,7 @@ export default class Github extends Component<GithubProps> {
   static Size = Size;
   static Activity = Activity;
   static Downloads = Downloads;
+  static Version = Version;
   render() {
     return (
       <>

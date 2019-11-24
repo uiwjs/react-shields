@@ -57,6 +57,19 @@ const App: React.FC = () => {
             <Github.Size type="size" path="src/index.ts" />
           </Github>
         </div>
+        <div className="App-list">
+          <div className="title">Github Version</div>
+          <Github.Version user="uiwjs" repo="uiw" />
+          <Github user="uiwjs" repo="uiw">
+            <Github.Version type="version-tag" />
+            <Github.Version type="package-json" />
+            <Github.Version type="package-json" branch="dev" />
+            <Github.Version user="jaywcjlove" repo="wxmp" type="manifest-json" />
+            <Github.Version user="jaywcjlove" repo="wxmp" type="manifest-json" branch="master" />
+            <Github.Version user="x-mod" repo="routine" type="go-mod" />
+            <Github.Version user="x-mod" repo="routine" type="go-mod" branch="master" />
+          </Github>
+        </div>
       </header>
     </div>
   );

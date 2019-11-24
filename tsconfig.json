@@ -20,7 +20,10 @@
     "baseUrl": "website",
     "jsx": "react"
   },
-  "include": ["website"],
+  "include": [
+    "website",
+    "src"
+  ],
   "typeRoots": [
     "node_modules/@types",
   ]

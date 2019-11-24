@@ -113,6 +113,16 @@ function Demo() {
 </Github>
 ```
 
+### Github.Analysis
+
+```jsx
+<Github.Analysis user="uiwjs" repo="uiw" />
+<Github user="uiwjs" repo="uiw">
+  <Github.Analysis type="languages-top" />
+  <Github.Analysis type="search" query="github" />
+</Github>
+```
+
 ## Development
 
 ```bash

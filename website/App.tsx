@@ -77,6 +77,14 @@ const App: React.FC = () => {
             <Github.License />
           </Github>
         </div>
+        <div className="App-list">
+          <div className="title">Github Analysis</div>
+          <Github.Analysis user="uiwjs" repo="uiw" />
+          <Github user="uiwjs" repo="uiw">
+            <Github.Analysis type="languages-top" />
+            <Github.Analysis type="search" query="github" />
+          </Github>
+        </div>
       </header>
     </div>
   );

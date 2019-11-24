@@ -1,11 +1,12 @@
 import React, { Component, ReactElement } from 'react';
+import { BaseProps } from '../common/Base';
 import Issues from './Issues';
 import Size from './Size';
 import Downloads from './Downloads';
 import Activity from './Activity';
 import Version from './Version';
 import License from './License';
-import { BaseProps } from '../common/Base';
+import Analysis from './Analysis';
 
 export interface GithubProps extends BaseProps {}
 
@@ -16,6 +17,7 @@ export default class Github extends Component<GithubProps> {
   static Downloads = Downloads;
   static Version = Version;
   static License = License;
+  static Analysis = Analysis;
   render() {
     return (
       <>

@@ -104,6 +104,15 @@ function Demo() {
 </Github>
 ```
 
+### Github.License
+
+```jsx
+<Github.License user="uiwjs" repo="uiw" />
+<Github user="uiwjs" repo="uiw">
+  <Github.License />
+</Github>
+```
+
 ## Development
 
 ```bash

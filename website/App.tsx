@@ -70,6 +70,13 @@ const App: React.FC = () => {
             <Github.Version user="x-mod" repo="routine" type="go-mod" branch="master" />
           </Github>
         </div>
+        <div className="App-list">
+          <div className="title">Github License</div>
+          <Github.License user="uiwjs" repo="uiw" />
+          <Github user="uiwjs" repo="uiw">
+            <Github.License />
+          </Github>
+        </div>
       </header>
     </div>
   );

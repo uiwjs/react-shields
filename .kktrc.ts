@@ -1,5 +1,10 @@
 import path from 'path';
 
+// export const moduleScopePluginOpts = [
+//   // path.resolve(process.cwd(), 'README.md'),
+//   // path.resolve(process.cwd(), 'src'),
+// ];
+
 export const loaderOneOf = [
   require.resolve('@kkt/loader-less')
 ];

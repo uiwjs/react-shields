@@ -64,7 +64,7 @@ export interface IssueProps extends BaseProps {
 
 export default class Issue extends Base<IssueProps> {
   constructor(props: IssueProps) {
-    super({ platform: 'github', type: 'issues', ...props });
+    super(props, { platform: 'github', type: 'issues' });
   };
   getUrl = () => {
     const { type, platform, property, user, repo, label, base } = this.state;

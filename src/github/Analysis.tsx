@@ -20,7 +20,7 @@ export interface AnalysisProps extends BaseProps {
 
 export default class Analysis extends Base<AnalysisProps> {
   constructor(props: AnalysisProps) {
-    super({ platform: 'github', type: 'languages-count', ...props });
+    super(props, { platform: 'github', type: 'languages-count' });
   };
   getUrl = () => {
     const {  base, platform, type, user, repo, query } = this.state;

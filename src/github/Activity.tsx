@@ -42,7 +42,7 @@ export interface ActivityProps extends BaseProps {
 
 export default class Activity extends Base<ActivityProps> {
   constructor(props: ActivityProps) {
-    super({ platform: 'github', type: 'commits-since', ...props });
+    super(props, { platform: 'github', type: 'commits-since' });
   };
   getUrl = () => {
     const { type, platform, user, repo, base, interval, variant, version, branch } = this.state;

@@ -56,7 +56,7 @@ export interface VersionProps extends BaseProps {
 
 export default class Version extends Base<VersionProps> {
   constructor(props: VersionProps) {
-    super({ platform: 'github', type: 'version-release', ...props });
+    super(props, { platform: 'github', type: 'version-release' });
   };
 
   getUrl = () => {

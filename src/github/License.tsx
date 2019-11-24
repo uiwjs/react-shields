@@ -13,7 +13,7 @@ export interface LicenseProps extends BaseProps {
 
 export default class License extends Base<LicenseProps> {
   constructor(props: LicenseProps) {
-    super({ platform: 'github', type: 'license', ...props });
+    super(props, { platform: 'github', type: 'license' });
   };
   getUrl = () => {
     const { type, platform, user, repo, base } = this.state;

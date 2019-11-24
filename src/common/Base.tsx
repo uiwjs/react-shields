@@ -16,9 +16,9 @@ export default class Base<T> extends Component<BaseProps & T, BaseState & T> {
     platform: 'github',
     base: 'https://img.shields.io',
   }
-  constructor(props: BaseProps & T, state: BaseProps = {}) {
+  constructor(props: BaseProps & T, state: BaseProps & T) {
     super(props);
-    this.state = Object.assign({}, { ...props, ...state});
+    this.state = Object.assign({}, { ...state,  ...props });
   }
   getUrl = () => '';
   render() {

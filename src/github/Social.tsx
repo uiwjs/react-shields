@@ -22,8 +22,7 @@ export interface SocialProps extends BaseProps {
 
 export default class Social extends Base<SocialProps> {
   constructor(props: SocialProps) {
-    super({ platform: 'github', type: 'followers', ...props });
-    console.log('~~~:', { platform: 'github', type: 'followers', ...props })
+    super(props, { platform: 'github', type: 'followers' });
   };
   getUrl = () => {
     const { type, platform, user, repo, base } = this.state;

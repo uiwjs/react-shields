@@ -19,7 +19,7 @@ export interface SizeProps extends BaseProps {
 
 export default class Size extends Base<SizeProps> {
   constructor(props: SizeProps) {
-    super({ platform: 'github', type: 'languages', ...props });
+    super(props, { platform: 'github', type: 'languages' });
   };
 
   getUrl = () => {

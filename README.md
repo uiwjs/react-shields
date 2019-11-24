@@ -30,7 +30,7 @@ function Demo() {
     <>
       <Github.Issues user="uiwjs" repo="uiw" />
       <Github user="uiwjs" repo="uiw">
-        <Github.Issues type="issues" />
+        <Github.Issues href="https://github.com/uiwjs/uiw" type="issues" />
         <Github.Issues type="issues-raw" />
         <Github.Issues type="issues-closed" />
       </Github>

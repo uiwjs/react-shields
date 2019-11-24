@@ -14,7 +14,7 @@ const App: React.FC = () => {
           <div className="title">Github Issue</div>
           <Github.Issues user="uiwjs" repo="uiw" />
           <Github user="uiwjs" repo="uiw">
-            <Github.Issues type="issues" />
+            <Github.Issues href="https://github.com/uiwjs/react-shields" type="issues" />
             <Github.Issues type="issues-raw" />
             <Github.Issues type="issues-closed" />
             <Github.Issues type="issues-closed-raw" />

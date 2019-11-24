@@ -1,11 +1,11 @@
-react-shields.io
+react-shields
 ===
 
 [![](https://img.shields.io/github/issues/uiwjs/react-shields.svg)](https://github.com/uiwjs/react-shields/issues)
 [![](https://img.shields.io/github/forks/uiwjs/react-shields.svg)](https://github.com/uiwjs/react-shields/network)
 [![](https://img.shields.io/github/stars/uiwjs/react-shields.svg)](https://github.com/uiwjs/react-shields/stargazers)
 [![](https://img.shields.io/github/v/release/uiwjs/react-shields.svg)](https://github.com/uiwjs/react-shields/releases)
-[![](https://img.shields.io/npm/v/react-shields.io.svg)](https://www.npmjs.com/package/@uiw/react-shields)
+[![](https://img.shields.io/npm/v/@uiw/react-shields.svg)](https://www.npmjs.com/package/@uiw/react-shields)
 [![](https://jaywcjlove.github.io/sb/ico/gitee.svg)](https://gitee.com/uiw/react-shields)
 
 <!--dividing-->
@@ -15,15 +15,15 @@ react-shields.io
 ## Install
 
 ```bash
-npm install --save react-shields.io
+npm install --save @uiw/react-shields
 # Via Yarn:
-yarn add react-shields.io
+yarn add @uiw/react-shields
 ```
 
 ## Usage
 
 ```jsx
-import GitHub from 'react-shields.io';
+import GitHub from '@uiw/react-shields';
 
 function Demo() {
   return (

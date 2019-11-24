@@ -1,4 +1,5 @@
 import React from 'react';
+import GitHubCorners from '@uiw/react-github-corners';
 import logo from './logo.svg';
 import './App.css';
 import { Github } from '../';
@@ -6,6 +7,7 @@ import { Github } from '../';
 const App: React.FC = () => {
   return (
     <div className="App">
+      <GitHubCorners href="https://github.com/uiwjs/react-shields" />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div className="App-list">

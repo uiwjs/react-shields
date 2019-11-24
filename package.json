@@ -1,5 +1,5 @@
 {
-  "name": "react-shields.io",
+  "name": "@uiw/react-shields",
   "version": "1.0.2",
   "description": "Shields.io for react component, Quality metadata badges for open source projects.",
   "main": "lib/cjs/index.js",
@@ -29,20 +29,21 @@
     "src",
     "lib"
   ],
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "compile-less-cli": "^1.1.5",
-    "prop-types": "^15.7.2",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "tsbb": "1.3.6"
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
+  "dependencies": {},
   "devDependencies": {
     "@kkt/loader-less": "^1.0.3",
-    "@types/classnames": "^2.2.9",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
-    "kkt": "^5.0.0-alpha.12"
+    "@uiw/react-github-corners": "^1.0.8",
+    "compile-less-cli": "^1.1.5",
+    "kkt": "^5.0.0-alpha.12",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "tsbb": "^1.3.6"
   },
   "browserslist": {
     "production": [

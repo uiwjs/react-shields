@@ -45,6 +45,18 @@ function Demo() {
 }
 ```
 
+### Github.Social
+
+```jsx
+<Github.Social user="jaywcjlove" repo="uiw" href="https://github.com/jaywcjlove" />
+<Github user="jaywcjlove" repo="awesome-mac">
+  <Github.Social type="forks" />
+  <Github.Social type="stars" />
+  <Github.Social type="watchers" />
+  <Github.Social type="followers" />
+</Github>
+```
+
 ### Github.Issues
 
 ```jsx

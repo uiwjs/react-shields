@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 export interface BaseProps {
-  platform?: 'github';
+  platform?: 'github' | 'coveralls';
   type?: string;
   user?: string;
   repo?: string;
@@ -16,9 +16,9 @@ export default class Base<T> extends Component<BaseProps & T, BaseState & T> {
     platform: 'github',
     base: 'https://img.shields.io',
   }
-  constructor(props: BaseProps & T, state: BaseProps & T) {
+  constructor(props: BaseProps & T, defaultState: BaseProps & T, forceState?: BaseProps & T) {
     super(props);
-    this.state = Object.assign({}, { ...state,  ...props });
+    this.state = Object.assign({}, { ...defaultState,  ...props }, forceState);
   }
   getUrl = () => '';
   render() {

@@ -2,7 +2,7 @@ import React from 'react';
 import GitHubCorners from '@uiw/react-github-corners';
 import logo from './logo.svg';
 import './App.css';
-import { Github } from '../';
+import { Github, Coverage } from '../';
 
 const App: React.FC = () => {
   return (
@@ -94,6 +94,14 @@ const App: React.FC = () => {
             <Github.Analysis type="languages-top" />
             <Github.Analysis type="search" query="github" />
           </Github>
+        </div>
+        <div className="App-list">
+          <div className="title">Github Coverages</div>
+          <Coverage.Coverages user="jaywcjlove" repo="hotkeys" />
+          <Coverage user="jaywcjlove" repo="hotkeys">
+            <Coverage.Coverages type="github"  />
+            <Coverage.Coverages type="github" />
+          </Coverage>
         </div>
       </header>
     </div>

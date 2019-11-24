@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.0aecc3b4.css",
-    "main.js": "/static/js/main.185311a1.js",
-    "main.js.map": "/static/js/main.185311a1.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.d207a41bcbb4f4830b829caf0e0c9b6a.js": "/precache-manifest.d207a41bcbb4f4830b829caf0e0c9b6a.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.0aecc3b4.css.map": "/static/css/main.0aecc3b4.css.map",
-    "static/media/logo.svg": "/static/media/logo.b8ad4d39.svg"
+    "main.css": "/react-shields/static/css/main.0aecc3b4.css",
+    "main.js": "/react-shields/static/js/main.e858084b.js",
+    "main.js.map": "/react-shields/static/js/main.e858084b.js.map",
+    "index.html": "/react-shields/index.html",
+    "precache-manifest.edb041fc0ae1c1f5fcacdaa83ca0f38b.js": "/react-shields/precache-manifest.edb041fc0ae1c1f5fcacdaa83ca0f38b.js",
+    "service-worker.js": "/react-shields/service-worker.js",
+    "static/css/main.0aecc3b4.css.map": "/react-shields/static/css/main.0aecc3b4.css.map",
+    "static/media/logo.svg": "/react-shields/static/media/logo.b8ad4d39.svg"
   }
 }

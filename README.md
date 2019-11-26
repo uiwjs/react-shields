@@ -23,7 +23,7 @@ yarn add @uiw/react-shields
 ## Usage
 
 ```jsx
-import GitHub from '@uiw/react-shields';
+import Github from '@uiw/react-shields';
 
 function Demo() {
   return (

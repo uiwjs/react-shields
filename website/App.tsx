@@ -2,7 +2,7 @@ import React from 'react';
 import GitHubCorners from '@uiw/react-github-corners';
 import logo from './logo.svg';
 import './App.css';
-import { Github, Coverage } from '../';
+import { Github, Coverage, Npm } from '../';
 
 const App: React.FC = () => {
   return (
@@ -19,6 +19,26 @@ const App: React.FC = () => {
             <Github.Social type="watchers" />
             <Github.Social type="followers" />
           </Github>
+        </div>
+        <div className="App-list">
+          <div className="title">Npm Version</div>
+          <Npm.Version scope="@uiw" packageName="react-shields" />
+          <Npm>
+            <Npm.Version scope="@uiw" packageName="react-github-corners" />
+            <Npm.Version packageName="hotkeys-js" />
+            <Npm.Version packageName="kkt" version="latest" />
+            <Npm.Version packageName="tsbb" />
+            <Npm.Version scope="@uiw" type="peer-dependency" dependency="react"  packageName="react-github-corners" />
+          </Npm>
+        </div>
+        <div className="App-list">
+          <div className="title">Npm Size</div>
+          <Npm.Size scope="@uiw" packageName="react-shields" />
+          <Npm>
+            <Npm.Size format="minzip" scope="@uiw" packageName="react-github-corners" />
+            <Npm.Size packageName="hotkeys-js" />
+            <Npm.Size packageName="kkt" version="5.0.0-alpha.12" />
+          </Npm>
         </div>
         <div className="App-list">
           <div className="title">Github Issue</div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 export interface BaseProps {
-  platform?: 'github' | 'coveralls';
+  platform?: 'github' | 'coveralls' | 'npm';
   type?: string;
   user?: string;
   repo?: string;

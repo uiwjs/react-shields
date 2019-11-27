@@ -57,6 +57,30 @@ function Demo() {
 </Github>
 ```
 
+### Npm.Version
+
+```jsx
+<Npm.Version scope="@uiw" packageName="react-shields" />
+<Npm>
+  <Npm.Version scope="@uiw" packageName="react-github-corners" />
+  <Npm.Version packageName="hotkeys-js" />
+  <Npm.Version packageName="kkt" version="latest" />
+  <Npm.Version packageName="tsbb" />
+  <Npm.Version scope="@uiw" type="peer-dependency" dependency="react"  packageName="react-github-corners" />
+</Npm>
+```
+
+### Npm.Size
+
+```jsx
+<Npm.Size scope="@uiw" packageName="react-shields" />
+<Npm>
+  <Npm.Size format="minzip" scope="@uiw" packageName="react-github-corners" />
+  <Npm.Size packageName="hotkeys-js" />
+  <Npm.Size packageName="kkt" version="latest" />
+</Npm>
+```
+
 ### Github.Issues
 
 ```jsx

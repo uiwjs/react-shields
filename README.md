@@ -66,7 +66,12 @@ function Demo() {
   <Npm.Version packageName="hotkeys-js" />
   <Npm.Version packageName="kkt" version="latest" />
   <Npm.Version packageName="tsbb" />
-  <Npm.Version scope="@uiw" type="peer-dependency" dependency="react"  packageName="react-github-corners" />
+  <Npm.Version
+    scope="@uiw"
+    type="peer-dependency"
+    dependency="react"
+    packageName="react-github-corners"
+  />
 </Npm>
 ```
 

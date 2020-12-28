@@ -1,6 +1,7 @@
 react-shields
 ===
 
+[![Build & Deploy](https://github.com/uiwjs/react-shields/workflows/Build%20&%20Deploy/badge.svg)](https://github.com/uiwjs/react-shields/actions)
 [![](https://img.shields.io/github/issues/uiwjs/react-shields.svg)](https://github.com/uiwjs/react-shields/issues)
 [![](https://img.shields.io/github/forks/uiwjs/react-shields.svg)](https://github.com/uiwjs/react-shields/network)
 [![](https://img.shields.io/github/stars/uiwjs/react-shields.svg)](https://github.com/uiwjs/react-shields/stargazers)

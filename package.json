@@ -43,7 +43,7 @@
     "@kkt/scope-plugin-options": "6.2.1",
     "@types/react": "16.9.34",
     "@types/react-dom": "16.9.6",
-    "@uiw/react-github-corners": "1.1.3",
+    "@uiw/react-github-corners": "1.2.0",
     "kkt": "6.2.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",

@@ -38,16 +38,16 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@kkt/less-modules": "6.2.1",
-    "@kkt/raw-modules": "6.2.1",
-    "@kkt/scope-plugin-options": "6.2.1",
-    "@types/react": "16.9.34",
-    "@types/react-dom": "16.9.6",
+    "@kkt/less-modules": "6.8.2",
+    "@kkt/raw-modules": "6.8.2",
+    "@kkt/scope-plugin-options": "6.8.2",
+    "@types/react": "17.0.3",
+    "@types/react-dom": "17.0.3",
     "@uiw/react-github-corners": "1.2.0",
-    "kkt": "6.2.1",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "tsbb": "1.7.1"
+    "kkt": "6.8.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "tsbb": "2.1.2"
   },
   "eslintConfig": {
     "extends": [

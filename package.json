@@ -2,23 +2,15 @@
   "name": "@uiw/react-shields",
   "version": "1.1.1",
   "description": "Shields.io for react component, Quality metadata badges for open source projects.",
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
-  "typings": "lib/cjs/index.d.ts",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
   "scripts": {
-    "prepare": "npm run build:lib",
+    "prepare": "npm run build",
     "released": "npm run build && npm run doc",
     "doc": "kkt build --app-src ./website",
     "start": "kkt start --app-src ./website",
-    "build": "npm run build:lib && npm run doc",
-    "build:lib": "npm run ts:build && npm run types:esm && npm run types:cjs",
-    "watch": "npm run ts:watch & npm run types:watch",
-    "types:build": "tsbb types --sourceRoot src --target ESNEXT",
-    "types:watch": "npm run types:esm -- --watch & npm run types:cjs -- --watch",
-    "types:esm": "npm run types:build -- --outDir ../lib/esm",
-    "types:cjs": "npm run types:build -- --outDir ../lib/cjs",
-    "ts:watch": "tsbb watch --env-name esm:dev --env-name cjs --target react",
-    "ts:build": "tsbb build --target react"
+    "watch": "tsbb watch",
+    "build": "tsbb build"
   },
   "homepage": "https://uiwjs.github.io/react-shields",
   "repository": {
@@ -29,7 +21,8 @@
   "license": "MIT",
   "files": [
     "src",
-    "lib"
+    "esm",
+    "cjs"
   ],
   "peerDependencies": {
     "@babel/runtime": ">=7.0.0",
@@ -47,7 +40,7 @@
     "kkt": "6.8.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "tsbb": "2.1.2"
+    "tsbb": "3.1.5"
   },
   "eslintConfig": {
     "extends": [

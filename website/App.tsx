@@ -1,7 +1,9 @@
 import React from 'react';
 import GitHubCorners from '@uiw/react-github-corners';
-import logo from './logo.svg';
+import MarkdownPreview from '@uiw/react-markdown-preview';
 import './App.css';
+import logo from './logo.svg';
+import MDStr from '../README.md';
 import { Github, Coverage, Npm } from '../';
 
 const App: React.FC = () => {
@@ -132,6 +134,9 @@ const App: React.FC = () => {
           </Coverage>
         </div>
       </header>
+      <div className="info">
+        <MarkdownPreview className="App-markdown" source={MDStr.replace(/([\s\S]*)<!--dividing-->/, '')} />
+      </div>
     </div>
   );
 }

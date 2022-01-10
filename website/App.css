@@ -37,3 +37,11 @@ body {
 .App-list {
   max-width: 400px;
 }
+
+.info {
+  text-align: left;
+  padding-top: 24px;
+  padding-bottom: 120px;
+  max-width: 820px;
+  margin: 0 auto;
+}

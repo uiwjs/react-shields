@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/react-shields/static/css/main.6d79cfe4.chunk.css",
-    "main.js": "/react-shields/static/js/main.a368a75a.chunk.js",
-    "main.js.map": "/react-shields/static/js/main.a368a75a.chunk.js.map",
-    "runtime-main.js": "/react-shields/static/js/runtime-main.334af8c9.js",
-    "runtime-main.js.map": "/react-shields/static/js/runtime-main.334af8c9.js.map",
-    "static/css/2.b37b9b81.chunk.css": "/react-shields/static/css/2.b37b9b81.chunk.css",
-    "static/js/2.4a9a90b2.chunk.js": "/react-shields/static/js/2.4a9a90b2.chunk.js",
-    "static/js/2.4a9a90b2.chunk.js.map": "/react-shields/static/js/2.4a9a90b2.chunk.js.map",
+    "main.css": "/react-shields/static/css/main.85c3592a.css",
+    "main.js": "/react-shields/static/js/main.149ee456.js",
+    "refractor-vendor.js": "/react-shields/static/js/refractor-vendor.fc23fda2.js",
+    "parse5-vendor.js": "/react-shields/static/js/parse5-vendor.eedcb582.js",
+    "react-vendor.js": "/react-shields/static/js/react-vendor.37eba6b9.js",
+    "static/media/logo.svg": "/react-shields/static/media/logo.105c84b79638a52626faa3d87261b0b8.svg",
     "index.html": "/react-shields/index.html",
-    "static/css/2.b37b9b81.chunk.css.map": "/react-shields/static/css/2.b37b9b81.chunk.css.map",
-    "static/css/main.6d79cfe4.chunk.css.map": "/react-shields/static/css/main.6d79cfe4.chunk.css.map",
-    "static/js/2.4a9a90b2.chunk.js.LICENSE.txt": "/react-shields/static/js/2.4a9a90b2.chunk.js.LICENSE.txt",
-    "static/media/logo.105c84b7.svg": "/react-shields/static/media/logo.105c84b7.svg"
+    "main.85c3592a.css.map": "/react-shields/static/css/main.85c3592a.css.map",
+    "main.149ee456.js.map": "/react-shields/static/js/main.149ee456.js.map",
+    "refractor-vendor.fc23fda2.js.map": "/react-shields/static/js/refractor-vendor.fc23fda2.js.map",
+    "parse5-vendor.eedcb582.js.map": "/react-shields/static/js/parse5-vendor.eedcb582.js.map",
+    "react-vendor.37eba6b9.js.map": "/react-shields/static/js/react-vendor.37eba6b9.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.334af8c9.js",
-    "static/css/2.b37b9b81.chunk.css",
-    "static/js/2.4a9a90b2.chunk.js",
-    "static/css/main.6d79cfe4.chunk.css",
-    "static/js/main.a368a75a.chunk.js"
+    "static/js/refractor-vendor.fc23fda2.js",
+    "static/js/parse5-vendor.eedcb582.js",
+    "static/js/react-vendor.37eba6b9.js",
+    "static/css/main.85c3592a.css",
+    "static/js/main.149ee456.js"
   ]
 }

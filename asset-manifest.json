@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-shields/static/css/main.ded16f30.css",
-    "main.js": "/react-shields/static/js/main.9c08fa61.js",
+    "main.js": "/react-shields/static/js/main.814c1093.js",
     "refractor-vendor.js": "/react-shields/static/js/refractor-vendor.518943c3.js",
     "parse5-vendor.js": "/react-shields/static/js/parse5-vendor.eedcb582.js",
     "react-vendor.js": "/react-shields/static/js/react-vendor.9c50685f.js",
     "static/media/logo.svg": "/react-shields/static/media/logo.105c84b79638a52626faa3d87261b0b8.svg",
     "index.html": "/react-shields/index.html",
     "main.ded16f30.css.map": "/react-shields/static/css/main.ded16f30.css.map",
-    "main.9c08fa61.js.map": "/react-shields/static/js/main.9c08fa61.js.map",
+    "main.814c1093.js.map": "/react-shields/static/js/main.814c1093.js.map",
     "refractor-vendor.518943c3.js.map": "/react-shields/static/js/refractor-vendor.518943c3.js.map",
     "parse5-vendor.eedcb582.js.map": "/react-shields/static/js/parse5-vendor.eedcb582.js.map",
     "react-vendor.9c50685f.js.map": "/react-shields/static/js/react-vendor.9c50685f.js.map"
@@ -18,6 +18,6 @@
     "static/js/parse5-vendor.eedcb582.js",
     "static/js/react-vendor.9c50685f.js",
     "static/css/main.ded16f30.css",
-    "static/js/main.9c08fa61.js"
+    "static/js/main.814c1093.js"
   ]
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import Container from '../common/Container';
 import Issues from './Issues';
 import Size from './Size';

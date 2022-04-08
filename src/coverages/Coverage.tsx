@@ -1,4 +1,3 @@
-import React  from 'react';
 import Container from '../common/Container';
 import Coverages from './Coverages';
 import Codacy from './Codacy';

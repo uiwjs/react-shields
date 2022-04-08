@@ -1,4 +1,3 @@
-import React from 'react';
 import Base, { BaseProps} from '../common/Base';
 
 export interface ActivityProps extends BaseProps {

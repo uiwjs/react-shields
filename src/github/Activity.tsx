@@ -1,4 +1,3 @@
-import React from 'react';
 import Base, { BaseProps} from '../common/Base';
 
 export interface ActivityProps extends BaseProps {
@@ -59,7 +58,7 @@ export default class Activity extends Base<ActivityProps> {
     if (type === 'last-commit') {
       return branch ? [base, platform, type, user, repo, branch].join('/') : [base, platform, type, user, repo].join('/');
     }
-    if (type && /^release\-(date|date\-pre)/.test(type)) {
+    if (type && /^release-(date|date-pre)/.test(type)) {
       return [base, platform, type, user, repo].join('/');
     }
     return '';

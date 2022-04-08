@@ -1,4 +1,3 @@
-import React from 'react';
 import Base, { BaseProps} from '../common/Base';
 
 export interface IssueProps extends BaseProps {
@@ -69,8 +68,8 @@ export default class Issue extends Base<IssueProps> {
   getUrl = () => {
     const { type, platform, property, user, repo, label, base } = this.state;
     if (platform !== 'github') return '';
-    if (type === 'issues' || /^issues\-(raw|closed|closed\-raw|pr|pr\-raw|pr\-closed|pr\-closed\-raw)/.test(type!)) {
-      if(label && (type === 'issues' || /^issues\-(raw|pr|pr\-raw)/.test(type || ''))) {
+    if (type === 'issues' || /^issues-(raw|closed|closed-raw|pr|pr-raw|pr-closed|pr-closed-raw)/.test(type!)) {
+      if(label && (type === 'issues' || /^issues-(raw|pr|pr-raw)/.test(type || ''))) {
         return [base, platform, type, user, repo, label].join('/');
       }
       return [base, platform, type, user, repo].join('/');

@@ -7,6 +7,7 @@ export interface BaseProps {
   repo?: string;
   base?: string;
   href?: HTMLAnchorElement['href'];
+  children?: React.ReactNode;
 }
 
 export interface BaseState extends BaseProps {}
@@ -24,8 +25,8 @@ export default class Base<T> extends Component<BaseProps & T, BaseState & T> {
   render() {
     const { href } = this.state;
     if (href) {
-      return <a href={href}> <img src={this.getUrl()} /> </a>;
+      return <a href={href}> <img alt="" src={this.getUrl()} /> </a>;
     }
-    return <img src={this.getUrl()} />;
+    return <img alt="" src={this.getUrl()} />;
   }
 }

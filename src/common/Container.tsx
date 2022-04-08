@@ -8,7 +8,7 @@ export default class Container extends Component<ContainerProps> {
     return (
       <>
         {React.Children.toArray(this.props.children).map((child: React.ReactNode) => {
-          if (!React.isValidElement(child)) return;
+          if (!React.isValidElement(child)) return null;
           return React.cloneElement(child as ReactElement, { ...this.props, ...(child as React.ReactElement).props });
         })}
       </>

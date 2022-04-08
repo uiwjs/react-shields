@@ -1,4 +1,3 @@
-import React from 'react';
 import Base, { BaseProps } from '../common/Base';
 
 export interface VersionProps extends BaseProps {
@@ -72,7 +71,7 @@ export default class Version extends Base<VersionProps> {
     }
     if (platform !== 'github' || !typePath) return '';
     const baseData = [base, platform, typePath, user, repo];
-    if (/(go\-mod|manifest\-json|package\-json)/.test(type || '') && branch) {
+    if (/(go-mod|manifest-json|package-json)/.test(type || '') && branch) {
       return [...baseData, branch].join('/');
     }
     return baseData.join('/');

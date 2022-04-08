@@ -201,3 +201,17 @@ Compile and release
 ```bash
 npm run released
 ```
+
+## Contributors
+
+As always, thanks to our amazing contributors!
+
+<a href="https://github.com/uiwjs/react-shields/graphs/contributors">
+  <img src="https://uiwjs.github.io/react-shields/CONTRIBUTORS.svg" />
+</a>
+
+Made with [action-contributors](https://github.com/jaywcjlove/github-action-contributors).
+
+## License
+
+Licensed under the MIT License.

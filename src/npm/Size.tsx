@@ -28,7 +28,7 @@ export default class Size extends Base<SizeProps> {
     super(props, { format: 'min' }, { platform: 'npm' });
   };
   getUrl = () => {
-    const { base, type, platform, format, packageName, scope, version } = this.state;
+    const { base, platform, format, packageName, scope, version } = this.state;
     if (platform !== 'npm') return '';
 
     const baseData = [base, 'bundlephobia'];

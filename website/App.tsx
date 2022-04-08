@@ -1,6 +1,7 @@
 import React from 'react';
 import GitHubCorners from '@uiw/react-github-corners';
 import MarkdownPreview from '@uiw/react-markdown-preview';
+import '@wcj/dark-mode';
 import './App.css';
 import logo from './logo.svg';
 import MDStr from '../README.md';
@@ -9,6 +10,7 @@ import { Github, Coverage, Npm } from '../';
 const App: React.FC = () => {
   return (
     <div className="App">
+      <dark-mode light="Light" dark="Dark" style={{ position: 'fixed', top: 8, left: 10 }}></dark-mode>
       <GitHubCorners href="https://github.com/uiwjs/react-shields" />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

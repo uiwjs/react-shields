@@ -17,14 +17,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "declaration": true,
-    "baseUrl": "website",
     "jsx": "react-jsx",
+    "outDir": "cjs",
     "noFallthroughCasesInSwitch": true,
     "noEmit": true
   },
   "include": [
-    "website",
-    "src",
-    ".kktrc.ts"
+    "src"
   ]
 }

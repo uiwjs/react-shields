@@ -45,6 +45,14 @@ const App: React.FC = () => {
           </Npm>
         </div>
         <div className="App-list">
+          <div className="title">Npm Downloads</div>
+          <Npm.Downloads scope="@uiw" packageName="react-shields" />
+          <Npm>
+            <Npm.Downloads interval="dw" scope="@uiw" packageName="react-github-corners" />
+            <Npm.Downloads packageName="hotkeys-js" />
+          </Npm>
+        </div>
+        <div className="App-list">
           <div className="title">Github Issue</div>
           <Github.Issues user="uiwjs" repo="uiw" />
           <Github user="uiwjs" repo="uiw">

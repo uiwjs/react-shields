@@ -87,6 +87,16 @@ function Demo() {
 </Npm>
 ```
 
+### Npm.Downloads
+
+```jsx
+<Npm.Downloads scope="@uiw" packageName="react-shields" />
+<Npm>
+  <Npm.Downloads interval="dw" scope="@uiw" packageName="react-github-corners" />
+  <Npm.Downloads packageName="hotkeys-js" />
+</Npm>
+```
+
 ### Github.Issues
 
 ```jsx

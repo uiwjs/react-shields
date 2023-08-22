@@ -1,0 +1,56 @@
+{
+  "name": "@uiw/react-shields",
+  "version": "1.2.0",
+  "description": "Shields.io for react component, Quality metadata badges for open source projects.",
+  "author": "Kenny Wong <wowohoo@qq.com>",
+  "license": "MIT",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "homepage": "https://uiwjs.github.io/react-shields",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uiwjs/react-shields"
+  },
+  "exports": {
+    ".": {
+      "import": "./esm/index.js",
+      "require": "./cjs/index.js",
+      "types": "./esm/index.d.ts"
+    },
+    "./if": {
+      "import": "./esm/If.js",
+      "require": "./cjs/If.js",
+      "types": "./esm/If.d.ts"
+    },
+    "./switch": {
+      "import": "./esm/switch.js",
+      "require": "./cjs/switch.js",
+      "types": "./esm/switch.d.ts"
+    }
+  },
+  "files": [
+    "src",
+    "cjs",
+    "esm"
+  ],
+  "keywords": [
+    "component",
+    "shields",
+    "npm",
+    "react",
+    "react-component"
+  ],
+  "peerDependencies": {
+    "@babel/runtime": ">=7.0.0",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.22.6"
+  },
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-test-renderer": "^18.2.0"
+  }
+}

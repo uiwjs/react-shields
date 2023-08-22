@@ -23,9 +23,17 @@ yarn add @uiw/react-shields
 
 ## Usage
 
+```jsx
+import { Github, Coverage, Npm } from '@uiw/react-shields';
+// Or
+import Npm from '@uiw/react-shields/npm';
+import Coverage from '@uiw/react-shields/coverage';
+import Github from '@uiw/react-shields/github';
+```
+
 ```jsx mdx:preview
 import React from 'react';
-import { Github } from '@uiw/react-shields';
+import Github from '@uiw/react-shields/github';
 
 export default function Demo() {
   return (
@@ -51,7 +59,7 @@ export default function Demo() {
 
 ```jsx mdx:preview
 import React from 'react';
-import { Github } from '@uiw/react-shields';
+import Github from '@uiw/react-shields/github';
 
 export default function Demo() {
   return (
@@ -72,7 +80,7 @@ export default function Demo() {
 
 ```jsx mdx:preview
 import React from 'react';
-import { Npm } from '@uiw/react-shields';
+import Npm from '@uiw/react-shields/npm';
 
 export default function Demo() {
   return (
@@ -99,7 +107,7 @@ export default function Demo() {
 
 ```jsx mdx:preview
 import React from 'react';
-import { Npm } from '@uiw/react-shields';
+import Npm from '@uiw/react-shields/npm';
 
 export default function Demo() {
   return (
@@ -119,7 +127,7 @@ export default function Demo() {
 
 ```jsx mdx:preview
 import React from 'react';
-import { Npm } from '@uiw/react-shields';
+import Npm from '@uiw/react-shields/npm';
 
 export default function Demo() {
   return (
@@ -138,7 +146,7 @@ export default function Demo() {
 
 ```jsx mdx:preview
 import React from 'react';
-import { Github } from '@uiw/react-shields';
+import Github from '@uiw/react-shields/github';
 
 export default function Demo() {
   return (
@@ -167,7 +175,7 @@ export default function Demo() {
 
 ```jsx mdx:preview
 import React from 'react';
-import { Github } from '@uiw/react-shields';
+import Github from '@uiw/react-shields/github';
 
 export default function Demo() {
   return (
@@ -187,7 +195,7 @@ export default function Demo() {
 
 ```jsx mdx:preview
 import React from 'react';
-import { Github } from '@uiw/react-shields';
+import Github from '@uiw/react-shields/github';
 
 export default function Demo() {
   return (
@@ -209,7 +217,7 @@ export default function Demo() {
 
 ```jsx mdx:preview
 import React from 'react';
-import { Github } from '@uiw/react-shields';
+import Github from '@uiw/react-shields/github';
 
 export default function Demo() {
   return (
@@ -233,7 +241,7 @@ export default function Demo() {
 
 ```jsx mdx:preview
 import React from 'react';
-import { Github } from '@uiw/react-shields';
+import Github from '@uiw/react-shields/github';
 
 export default function Demo() {
   return (
@@ -251,7 +259,7 @@ export default function Demo() {
 
 ```jsx mdx:preview
 import React from 'react';
-import { Github } from '@uiw/react-shields';
+import Github from '@uiw/react-shields/github';
 
 export default function Demo() {
   return (
@@ -270,7 +278,7 @@ export default function Demo() {
 
 ```jsx mdx:preview
 import React from 'react';
-import { Coverage } from '@uiw/react-shields';
+import Coverage from '@uiw/react-shields/coverage';
 
 export default function Demo() {
   return (
@@ -289,7 +297,7 @@ export default function Demo() {
 
 ```jsx mdx:preview
 import React from 'react';
-import { Coverage } from '@uiw/react-shields';
+import Coverage from '@uiw/react-shields/coverage';
 
 export default function Demo() {
   return (

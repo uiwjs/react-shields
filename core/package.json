@@ -17,15 +17,20 @@
       "require": "./cjs/index.js",
       "types": "./esm/index.d.ts"
     },
-    "./if": {
-      "import": "./esm/If.js",
-      "require": "./cjs/If.js",
-      "types": "./esm/If.d.ts"
+    "./npm": {
+      "import": "./esm/npm/Npm.js",
+      "require": "./cjs/npm/Npm.js",
+      "types": "./esm/npm/Npm.d.ts"
     },
-    "./switch": {
-      "import": "./esm/switch.js",
-      "require": "./cjs/switch.js",
-      "types": "./esm/switch.d.ts"
+    "./github": {
+      "import": "./esm/github/Github.js",
+      "require": "./cjs/github/Github.js",
+      "types": "./esm/github/Github.d.ts"
+    },
+    "./coverage": {
+      "import": "./esm/coverages/Coverage.js",
+      "require": "./cjs/coverages/Coverage.js",
+      "types": "./esm/coverages/Coverage.d.ts"
     }
   },
   "files": [

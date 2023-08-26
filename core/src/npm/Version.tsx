@@ -50,6 +50,10 @@ export interface VersionProps extends BaseProps {
 }
 
 export default class Version extends Base<VersionProps> {
+  static defaultProps: BaseProps = {
+    platform: 'npm',
+    base: 'https://img.shields.io',
+  };
   constructor(props: VersionProps) {
     super(props, { type: 'version' }, { platform: 'npm' });
   }

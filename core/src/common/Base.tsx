@@ -21,6 +21,11 @@ export default class Base<T> extends Component<BaseProps & T, BaseState & T> {
     super(props);
     this.state = Object.assign({}, { ...defaultState, ...props }, forceState);
   }
+  componentDidUpdate(prevProps: Readonly<BaseProps & T>, prevState: Readonly<BaseState & T>, snapshot?: any): void {
+    if (prevProps !== this.props) {
+      this.setState({ ...this.state, ...this.props });
+    }
+  }
   getUrl = () => '';
   render() {
     const { href } = this.state;

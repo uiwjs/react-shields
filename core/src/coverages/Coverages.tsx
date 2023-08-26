@@ -21,6 +21,10 @@ export interface CoveragesProps extends BaseProps {
 }
 
 export default class Coverages extends Base<CoveragesProps> {
+  static defaultProps: BaseProps = {
+    platform: 'coveralls',
+    base: 'https://img.shields.io',
+  };
   constructor(props: CoveragesProps) {
     super(props, { type: 'github' }, { platform: 'coveralls' });
   }

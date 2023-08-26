@@ -24,6 +24,10 @@ export interface SizeProps extends BaseProps {
  *
  */
 export default class Size extends Base<SizeProps> {
+  static defaultProps: BaseProps = {
+    platform: 'npm',
+    base: 'https://img.shields.io',
+  };
   constructor(props: SizeProps) {
     super(props, { format: 'min' }, { platform: 'npm' });
   }

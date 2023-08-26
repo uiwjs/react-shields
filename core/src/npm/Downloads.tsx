@@ -17,6 +17,10 @@ export interface DownloadProps extends BaseProps {
  *
  */
 export default class Downloads extends Base<DownloadProps> {
+  static defaultProps: BaseProps = {
+    platform: 'npm',
+    base: 'https://img.shields.io',
+  };
   constructor(props: DownloadProps) {
     super(props, { interval: 'dm' }, { platform: 'npm' });
   }

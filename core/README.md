@@ -123,6 +123,25 @@ export default function Demo() {
 }
 ```
 
+```jsx mdx:preview
+import React from 'react';
+import Npm from '@uiw/react-shields/npm';
+
+export default function Demo() {
+  const [scope, setScope] = React.useState('@uiw');
+  const [packageName, setPackageName] = React.useState('react-shields');
+  return (
+    <>
+      <Npm.Size scope={scope} packageName={packageName} />
+      <div>
+        <button onClick={() => setPackageName('react-shields')}>react-shields</button>
+        <button onClick={() => setPackageName('react-codemirror')}>react-codemirror</button>
+      </div>
+    </>
+  );
+}
+```
+
 ### Npm.Downloads
 
 ```jsx mdx:preview

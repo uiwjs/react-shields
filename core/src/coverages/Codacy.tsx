@@ -15,6 +15,10 @@ export interface CodacyProps extends BaseProps {
 }
 
 export default class Codacy extends Base<CodacyProps> {
+  static defaultProps: BaseProps = {
+    platform: 'coveralls',
+    base: 'https://img.shields.io',
+  };
   constructor(props: CodacyProps) {
     super(props, {}, { platform: 'coveralls' });
   }

@@ -18,19 +18,19 @@
       "types": "./esm/index.d.ts"
     },
     "./npm": {
-      "import": "./esm/npm/Npm.js",
-      "require": "./cjs/npm/Npm.js",
-      "types": "./esm/npm/Npm.d.ts"
+      "import": "./esm/npm/index.js",
+      "require": "./cjs/npm/index.js",
+      "types": "./esm/npm/index.d.ts"
     },
     "./github": {
-      "import": "./esm/github/Github.js",
-      "require": "./cjs/github/Github.js",
-      "types": "./esm/github/Github.d.ts"
+      "import": "./esm/github/index.js",
+      "require": "./cjs/github/index.js",
+      "types": "./esm/github/index.d.ts"
     },
     "./coverage": {
-      "import": "./esm/coverages/Coverage.js",
-      "require": "./cjs/coverages/Coverage.js",
-      "types": "./esm/coverages/Coverage.d.ts"
+      "import": "./esm/coverages/index.js",
+      "require": "./cjs/coverages/index.js",
+      "types": "./esm/coverages/index.d.ts"
     }
   },
   "files": [

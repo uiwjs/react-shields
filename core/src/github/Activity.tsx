@@ -1,6 +1,7 @@
-import Base, { BaseProps } from '../common/Base';
+import React from 'react';
+import { Internal, type InternalProps } from '../common/Base';
 
-export interface ActivityProps extends BaseProps {
+export interface ActivityProps extends InternalProps {
   /**
    * `/github/commit-activity/:interval/:user/:repo`
    * GitHub commit activity: GitHub commit activity badge
@@ -39,12 +40,20 @@ export interface ActivityProps extends BaseProps {
   branch?: string;
 }
 
-export default class Activity extends Base<ActivityProps> {
-  constructor(props: ActivityProps) {
-    super(props, { platform: 'github', type: 'commits-since' });
-  }
-  getUrl = () => {
-    const { type, platform, user, repo, base, interval, variant, version, branch } = this.state;
+const Activity = React.forwardRef<HTMLImageElement, ActivityProps>((props, ref) => {
+  const {
+    platform = 'github',
+    base = 'https://img.shields.io',
+    type = 'commits-since',
+    user,
+    repo,
+    interval,
+    variant,
+    version,
+    branch,
+    ...other
+  } = props;
+  const getUrl = () => {
     if (platform !== 'github') return '';
     if (type === 'commits-since' && version && branch) {
       return [base, platform, type, user, repo, version, branch].join('/');
@@ -65,4 +74,9 @@ export default class Activity extends Base<ActivityProps> {
     }
     return '';
   };
-}
+  return <Internal imgSrc={getUrl()} ref={ref} {...other} />;
+});
+
+Activity.displayName = 'Activity';
+
+export default Activity;

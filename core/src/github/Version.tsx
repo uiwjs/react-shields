@@ -1,6 +1,7 @@
-import Base, { BaseProps } from '../common/Base';
+import React from 'react';
+import { Internal, type InternalProps } from '../common/Base';
 
-export interface VersionProps extends BaseProps {
+export interface VersionProps extends InternalProps {
   /**
    * Github Version
    *
@@ -53,13 +54,17 @@ export interface VersionProps extends BaseProps {
   branch?: string;
 }
 
-export default class Version extends Base<VersionProps> {
-  constructor(props: VersionProps) {
-    super(props, { platform: 'github', type: 'version-release' });
-  }
-
-  getUrl = () => {
-    const { type, platform, user, repo, base, branch } = this.state;
+export default React.forwardRef<HTMLImageElement, VersionProps>((props, ref) => {
+  const {
+    platform = 'github',
+    type = 'version-release',
+    base = 'https://img.shields.io',
+    user,
+    repo,
+    branch,
+    ...other
+  } = props;
+  const getUrl = () => {
     let typePath = '';
     switch (type) {
       case 'version-release':
@@ -87,4 +92,5 @@ export default class Version extends Base<VersionProps> {
     }
     return baseData.join('/');
   };
-}
+  return <Internal imgSrc={getUrl()} ref={ref} {...other} />;
+});

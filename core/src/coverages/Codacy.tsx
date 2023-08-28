@@ -1,6 +1,7 @@
-import Base, { BaseProps } from '../common/Base';
+import React from 'react';
+import { Internal, type InternalProps } from '../common/Base';
 
-export interface CodacyProps extends BaseProps {
+export interface CodacyProps extends InternalProps {
   /**
    * Codacy Coverage
    *
@@ -14,18 +15,16 @@ export interface CodacyProps extends BaseProps {
   branch?: string;
 }
 
-export default class Codacy extends Base<CodacyProps> {
-  static defaultProps: BaseProps = {
-    platform: 'coveralls',
-    base: 'https://img.shields.io',
-  };
-  constructor(props: CodacyProps) {
-    super(props, {}, { platform: 'coveralls' });
-  }
-  getUrl = () => {
-    const { base, platform, projectId, branch } = this.state;
+const Codacy = React.forwardRef<HTMLImageElement, CodacyProps>((props, ref) => {
+  const { platform = 'coveralls', base = 'https://img.shields.io', projectId, branch, ...other } = props;
+  const getUrl = () => {
     if (platform !== 'coveralls') return '';
     if (branch) return [base, platform, projectId, branch].join('/');
     return [base, 'codacy/coverage', projectId].join('/');
   };
-}
+  return <Internal imgSrc={getUrl()} ref={ref} {...other} />;
+});
+
+Codacy.displayName = 'Codacy';
+
+export default Codacy;

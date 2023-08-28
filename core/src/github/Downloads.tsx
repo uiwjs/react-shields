@@ -1,6 +1,7 @@
-import Base, { BaseProps } from '../common/Base';
+import React from 'react';
+import { Internal, type InternalProps } from '../common/Base';
 
-export interface ActivityProps extends BaseProps {
+export interface DownloadsProps extends InternalProps {
   /**
    * Github Downloads
    *
@@ -28,12 +29,19 @@ export interface ActivityProps extends BaseProps {
   total?: boolean;
 }
 
-export default class Activity extends Base<ActivityProps> {
-  constructor(props: ActivityProps) {
-    super(props, { platform: 'github', type: 'downloads', total: true });
-  }
-  getUrl = () => {
-    const { type, platform, user, repo, base, tag, path, total } = this.state;
+const Downloads = React.forwardRef<HTMLImageElement, DownloadsProps>((props, ref) => {
+  const {
+    platform = 'github',
+    type = 'downloads',
+    base = 'https://img.shields.io',
+    user,
+    repo,
+    tag,
+    path,
+    total = true,
+    ...other
+  } = props;
+  const getUrl = () => {
     if (platform !== 'github' || !/^(downloads|downloads-pre)/.test(type || '')) return '';
 
     const baseData = [base, platform, type, user, repo];
@@ -49,4 +57,9 @@ export default class Activity extends Base<ActivityProps> {
     }
     return '';
   };
-}
+  return <Internal imgSrc={getUrl()} ref={ref as React.ForwardedRef<HTMLImageElement>} {...other} />;
+});
+
+Downloads.displayName = 'Downloads';
+
+export default Downloads;

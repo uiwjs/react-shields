@@ -1,6 +1,7 @@
-import Base, { BaseProps } from '../common/Base';
+import React from 'react';
+import { Internal, type InternalProps } from '../common/Base';
 
-export interface LicenseProps extends BaseProps {
+export interface LicenseProps extends InternalProps {
   /**
    * Github License
    *
@@ -10,13 +11,13 @@ export interface LicenseProps extends BaseProps {
   type?: 'license';
 }
 
-export default class License extends Base<LicenseProps> {
-  constructor(props: LicenseProps) {
-    super(props, { platform: 'github', type: 'license' });
-  }
-  getUrl = () => {
-    const { type, platform, user, repo, base } = this.state;
+export const License = React.forwardRef<HTMLImageElement, LicenseProps>((props, ref) => {
+  const { platform = 'github', type = 'license', base = 'https://img.shields.io', user, repo, ...other } = props;
+  const getUrl = () => {
     if (platform !== 'github') return '';
     return [base, platform, type, user, repo].join('/');
   };
-}
+  return <Internal imgSrc={getUrl()} ref={ref} {...other} />;
+});
+
+License.displayName = 'License';

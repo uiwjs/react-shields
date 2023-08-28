@@ -8,14 +8,16 @@ declare module '@uiw/react-shields/github' {
   import License from '@uiw/react-shields/esm/github/License';
   import Analysis from '@uiw/react-shields/esm/github/Analysis';
   import Social from '@uiw/react-shields/esm/github/Social';
-  export default class Github extends Container {
-    static Issues: typeof Issues;
-    static Size: typeof Size;
-    static Activity: typeof Activity;
-    static Downloads: typeof Downloads;
-    static Version: typeof Version;
-    static License: typeof License;
-    static Analysis: typeof Analysis;
-    static Social: typeof Social;
-  }
+  type GithubComponent = typeof Container & {
+    Issues: typeof Issues;
+    Size: typeof Size;
+    Downloads: typeof Downloads;
+    License: typeof License;
+    Activity: typeof Activity;
+    Analysis: typeof Analysis;
+    Version: typeof Version;
+    Social: typeof Social;
+  };
+  const Github: GithubComponent;
+  export default Github;
 }

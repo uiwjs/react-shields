@@ -1,6 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import MarkdownPreviewExample from '@uiw/react-markdown-preview-example';
-import { Github, Npm } from '@uiw/react-shields';
+// import Github from '@uiw/react-shields/github';
+// import Npm from '@uiw/react-shields/npm';
 import data from '../../core/README.md';
 import pkg from '../../core/package.json';
 
@@ -20,16 +21,7 @@ root.render(
   >
     <GithubEx href="https://github.com/uiwjs/react-shields" />
     <Example>
-      <div>
-        <Github.Social user="jaywcjlove" repo="uiw" href="https://github.com/jaywcjlove" />
-        <Github user="uiwjs" repo="react-shields">
-          <Github.Social type="forks" />
-          <Github.Social type="stars" />
-          <Github.Social type="watchers" />
-          <Github.Social type="followers" />
-          <Npm.Version scope="@uiw" packageName="react-shields" />
-        </Github>
-      </div>
+      <div></div>
     </Example>
   </MarkdownPreviewExample>,
 );

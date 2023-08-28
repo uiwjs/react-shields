@@ -1,6 +1,7 @@
-import Base, { BaseProps } from '../common/Base';
+import React from 'react';
+import { Internal, type InternalProps } from '../common/Base';
 
-export interface IssueProps extends BaseProps {
+export interface IssuesProps extends InternalProps {
   /**
    * Github Issue
    *
@@ -68,12 +69,18 @@ export interface IssueProps extends BaseProps {
   label?: string;
 }
 
-export default class Issue extends Base<IssueProps> {
-  constructor(props: IssueProps) {
-    super(props, { platform: 'github', type: 'issues' });
-  }
-  getUrl = () => {
-    const { type, platform, property, user, repo, label, base } = this.state;
+export const Issues = React.forwardRef<HTMLImageElement, IssuesProps>((props, ref) => {
+  const {
+    type = 'issues',
+    platform = 'github',
+    base = 'https://img.shields.io',
+    property,
+    user,
+    repo,
+    label,
+    ...other
+  } = props;
+  const getUrl = () => {
     if (platform !== 'github') return '';
     if (type === 'issues' || /^issues-(raw|closed|closed-raw|pr|pr-raw|pr-closed|pr-closed-raw)/.test(type!)) {
       if (label && (type === 'issues' || /^issues-(raw|pr|pr-raw)/.test(type || ''))) {
@@ -86,4 +93,7 @@ export default class Issue extends Base<IssueProps> {
     }
     return '';
   };
-}
+  return <Internal imgSrc={getUrl()} ref={ref as React.ForwardedRef<HTMLImageElement>} {...other} />;
+});
+
+Issues.displayName = 'Issues';

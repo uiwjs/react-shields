@@ -1,13 +1,14 @@
-import Base, { BaseProps } from '../common/Base';
+import React from 'react';
+import { Internal, type InternalProps } from '../common/Base';
 
-export interface DownloadProps extends BaseProps {
+export interface DownloadProps extends InternalProps {
   interval?: 'dw' | 'dm' | 'dy' | 'dt';
   packageName?: string;
   scope?: string;
 }
 
 /**
- * Npm Size
+ * Npm Downloads
  *
  * `/npm/:interval/:packageName`
  * npm downloads: npm downloads per interval badge
@@ -16,16 +17,9 @@ export interface DownloadProps extends BaseProps {
  * npm downloads (scoped): npm downloads per interval (scoped version) badge
  *
  */
-export default class Downloads extends Base<DownloadProps> {
-  static defaultProps: BaseProps = {
-    platform: 'npm',
-    base: 'https://img.shields.io',
-  };
-  constructor(props: DownloadProps) {
-    super(props, { interval: 'dm' }, { platform: 'npm' });
-  }
-  getUrl = () => {
-    const { base, platform, interval, packageName, scope } = this.state;
+const Downloads = React.forwardRef<HTMLImageElement, DownloadProps>((props, ref) => {
+  const { base = 'https://img.shields.io', platform = 'npm', interval = 'dm', packageName, scope, ...other } = props;
+  const getUrl = () => {
     if (platform !== 'npm' || !packageName) return '';
 
     const url = [base, 'npm', interval];
@@ -38,4 +32,9 @@ export default class Downloads extends Base<DownloadProps> {
 
     return url.join('/');
   };
-}
+  return <Internal imgSrc={getUrl()} ref={ref} {...other} />;
+});
+
+Downloads.displayName = 'Downloads';
+
+export default Downloads;

@@ -1,6 +1,7 @@
-import Base, { BaseProps } from '../common/Base';
+import React from 'react';
+import { Internal, type InternalProps } from '../common/Base';
 
-export interface AnalysisProps extends BaseProps {
+export interface AnalysisProps extends InternalProps {
   /**
    * Github Analysis
    *
@@ -17,12 +18,17 @@ export interface AnalysisProps extends BaseProps {
   query?: string;
 }
 
-export default class Analysis extends Base<AnalysisProps> {
-  constructor(props: AnalysisProps) {
-    super(props, { platform: 'github', type: 'languages-count' });
-  }
-  getUrl = () => {
-    const { base, platform, type, user, repo, query } = this.state;
+const Analysis = React.forwardRef<HTMLImageElement, AnalysisProps>((props, ref) => {
+  const {
+    platform = 'github',
+    type = 'languages-count',
+    base = 'https://img.shields.io',
+    user,
+    repo,
+    query,
+    ...other
+  } = props;
+  const getUrl = () => {
     let typePath = '';
     switch (type) {
       case 'languages-count':
@@ -44,4 +50,9 @@ export default class Analysis extends Base<AnalysisProps> {
     }
     return baseData.join('/');
   };
-}
+  return <Internal imgSrc={getUrl()} ref={ref} {...other} />;
+});
+
+Analysis.displayName = 'Analysis';
+
+export default Analysis;

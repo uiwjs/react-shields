@@ -1,6 +1,7 @@
-import Base, { BaseProps } from '../common/Base';
+import React from 'react';
+import { Internal, type InternalProps } from '../common/Base';
 
-export interface CoveragesProps extends BaseProps {
+export interface CoveragesProps extends InternalProps {
   /**
    * Code Coverage
    *
@@ -20,17 +21,15 @@ export interface CoveragesProps extends BaseProps {
   branch?: string;
 }
 
-export default class Coverages extends Base<CoveragesProps> {
-  static defaultProps: BaseProps = {
-    platform: 'coveralls',
-    base: 'https://img.shields.io',
-  };
-  constructor(props: CoveragesProps) {
-    super(props, { type: 'github' }, { platform: 'coveralls' });
-  }
-  getUrl = () => {
-    const { type, platform, user, repo, base } = this.state;
+const Coverages = React.forwardRef<HTMLImageElement, CoveragesProps>((props, ref) => {
+  const { type = 'github', platform = 'coveralls', base = 'https://img.shields.io', user, repo, ...other } = props;
+  const getUrl = () => {
     if (platform !== 'coveralls') return '';
     return [base, platform, type, user, repo].join('/');
   };
-}
+  return <Internal imgSrc={getUrl()} ref={ref} {...other} />;
+});
+
+Coverages.displayName = 'Coverages';
+
+export default Coverages;

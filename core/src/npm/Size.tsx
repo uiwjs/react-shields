@@ -1,6 +1,7 @@
-import Base, { BaseProps } from '../common/Base';
+import React from 'react';
+import { Internal, type InternalProps } from '../common/Base';
 
-export interface SizeProps extends BaseProps {
+export interface SizeProps extends InternalProps {
   format?: 'min' | 'minzip';
   packageName?: string;
   scope?: string;
@@ -23,16 +24,17 @@ export interface SizeProps extends BaseProps {
  * npm bundle size (scoped version): npm bundle size (scoped version) badge
  *
  */
-export default class Size extends Base<SizeProps> {
-  static defaultProps: BaseProps = {
-    platform: 'npm',
-    base: 'https://img.shields.io',
-  };
-  constructor(props: SizeProps) {
-    super(props, { format: 'min' }, { platform: 'npm' });
-  }
-  getUrl = () => {
-    const { base, platform, format, packageName, scope, version } = this.state;
+const Size = React.forwardRef<HTMLImageElement, SizeProps>((props, ref) => {
+  const {
+    base = 'https://img.shields.io',
+    platform = 'npm',
+    format = 'min',
+    packageName,
+    scope,
+    version,
+    ...other
+  } = props;
+  const getUrl = () => {
     if (platform !== 'npm') return '';
 
     const baseData = [base, 'bundlephobia'];
@@ -53,4 +55,9 @@ export default class Size extends Base<SizeProps> {
 
     return url;
   };
-}
+  return <Internal imgSrc={getUrl()} ref={ref} {...other} />;
+});
+
+Size.displayName = 'Size';
+
+export default Size;

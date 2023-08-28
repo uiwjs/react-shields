@@ -1,4 +1,5 @@
-import Base, { BaseProps } from '../common/Base';
+import React from 'react';
+import { Internal, type InternalProps } from '../common/Base';
 
 /**
  * NPM Version
@@ -39,7 +40,7 @@ import Base, { BaseProps } from '../common/Base';
  * `/npm/types/:packageName`
  * npm type definitions: npm type definitions badge
  */
-export interface VersionProps extends BaseProps {
+export interface VersionProps extends InternalProps {
   type?: 'version' | 'peer-dependency' | 'dev-dependency';
   registryUri?: string;
   packageName?: string;
@@ -49,16 +50,20 @@ export interface VersionProps extends BaseProps {
   version?: string;
 }
 
-export default class Version extends Base<VersionProps> {
-  static defaultProps: BaseProps = {
-    platform: 'npm',
-    base: 'https://img.shields.io',
-  };
-  constructor(props: VersionProps) {
-    super(props, { type: 'version' }, { platform: 'npm' });
-  }
-  getUrl = () => {
-    const { base, platform, type, scope, packageName, dependency, dependencyScope, version, registryUri } = this.state;
+const Version = React.forwardRef<HTMLImageElement, VersionProps>((props, ref) => {
+  const {
+    base = 'https://img.shields.io',
+    platform = 'npm',
+    type = 'version',
+    scope,
+    packageName,
+    dependency,
+    dependencyScope,
+    version,
+    registryUri,
+    ...other
+  } = props;
+  const getUrl = () => {
     if (platform !== 'npm' || !packageName) return '';
 
     let url = '';
@@ -101,4 +106,9 @@ export default class Version extends Base<VersionProps> {
 
     return url;
   };
-}
+  return <Internal imgSrc={getUrl()} ref={ref} {...other} />;
+});
+
+Version.displayName = 'Version';
+
+export default Version;

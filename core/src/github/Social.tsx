@@ -1,6 +1,7 @@
-import Base, { BaseProps } from '../common/Base';
+import React from 'react';
+import { Internal, type InternalProps } from '../common/Base';
 
-export interface SocialProps extends BaseProps {
+export interface SocialProps extends InternalProps {
   /**
    * Github License
    *
@@ -19,14 +20,16 @@ export interface SocialProps extends BaseProps {
   type?: 'followers' | 'forks' | 'stars' | 'watchers';
 }
 
-export default class Social extends Base<SocialProps> {
-  constructor(props: SocialProps) {
-    super(props, { platform: 'github', type: 'followers' });
-  }
-  getUrl = () => {
-    const { type, platform, user, repo, base } = this.state;
+const Social = React.forwardRef<HTMLImageElement, SocialProps>((props, ref) => {
+  const { type = 'followers', platform = 'github', base = 'https://img.shields.io', user, repo, ...other } = props;
+  const getUrl = () => {
     if (platform !== 'github') return '';
     if (type === 'followers') return [base, platform, type, user].join('/');
     return [base, platform, type, user, repo].join('/');
   };
-}
+  return <Internal imgSrc={getUrl()} ref={ref} {...other} />;
+});
+
+Social.displayName = 'Social';
+
+export default Social;

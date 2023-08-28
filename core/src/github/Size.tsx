@@ -1,6 +1,7 @@
-import Base, { BaseProps } from '../common/Base';
+import React from 'react';
+import { Internal, type InternalProps } from '../common/Base';
 
-export interface SizeProps extends BaseProps {
+export interface SizeProps extends InternalProps {
   /**
    * Github Size
    *
@@ -16,13 +17,17 @@ export interface SizeProps extends BaseProps {
   path?: string;
 }
 
-export default class Size extends Base<SizeProps> {
-  constructor(props: SizeProps) {
-    super(props, { platform: 'github', type: 'languages' });
-  }
-
-  getUrl = () => {
-    const { type, platform, user, repo, base, path } = this.state;
+export const Size = React.forwardRef<HTMLImageElement, SizeProps>((props, ref) => {
+  const {
+    type = 'languages',
+    platform = 'github',
+    base = 'https://img.shields.io',
+    user,
+    repo,
+    path,
+    ...other
+  } = props;
+  const getUrl = () => {
     if (platform !== 'github') return '';
     /**
      * /github/languages/code-size/:user/:repo
@@ -44,4 +49,7 @@ export default class Size extends Base<SizeProps> {
     }
     return '';
   };
-}
+  return <Internal imgSrc={getUrl()} ref={ref} {...other} />;
+});
+
+Size.displayName = 'Size';

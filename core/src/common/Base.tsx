@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import type { AnchorHTMLAttributes, ImgHTMLAttributes } from 'react';
 
-export interface BaseProps {
+export interface BaseProps extends ImgHTMLAttributes<HTMLImageElement> {
   platform?: 'github' | 'coveralls' | 'npm';
   type?: string;
   user?: string;
@@ -8,8 +9,8 @@ export interface BaseProps {
   base?: string;
   href?: HTMLAnchorElement['href'];
   children?: React.ReactNode;
+  anchor?: Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'>;
 }
-
 export interface BaseState extends BaseProps {}
 
 export default class Base<T> extends Component<BaseProps & T, BaseState & T> {
@@ -28,15 +29,14 @@ export default class Base<T> extends Component<BaseProps & T, BaseState & T> {
   }
   getUrl = () => '';
   render() {
-    const { href } = this.state;
+    const { href, anchor, ...other } = this.state;
     if (href) {
       return (
-        <a href={href}>
-          {' '}
-          <img alt="" src={this.getUrl()} />{' '}
+        <a {...anchor} href={href}>
+          <img alt="" src={this.getUrl()} {...other} />
         </a>
       );
     }
-    return <img alt="" src={this.getUrl()} />;
+    return <img alt="" src={this.getUrl()} {...other} />;
   }
 }

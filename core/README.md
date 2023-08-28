@@ -85,7 +85,7 @@ import Npm from '@uiw/react-shields/npm';
 export default function Demo() {
   return (
     <>
-      <Npm.Version scope="@uiw" packageName="react-shields" />
+      <Npm.Version scope="@uiw" packageName="react-shields" href="https://npmjs.com/@uiw/react-shields" />
       <Npm>
         <Npm.Version scope="@uiw" packageName="react-github-corners" />
         <Npm.Version packageName="hotkeys-js" />
@@ -112,7 +112,7 @@ import Npm from '@uiw/react-shields/npm';
 export default function Demo() {
   return (
     <>
-      <Npm.Size scope="@uiw" packageName="react-shields" />
+      <Npm.Size scope="@uiw" packageName="react-shields" href="https://npmjs.com/@uiw/react-shields" />
       <Npm>
         <Npm.Size format="minzip" scope="@uiw" packageName="react-github-corners" />
         <Npm.Size packageName="hotkeys-js" />
@@ -151,7 +151,7 @@ import Npm from '@uiw/react-shields/npm';
 export default function Demo() {
   return (
     <>
-      <Npm.Downloads scope="@uiw" packageName="react-shields" />
+      <Npm.Downloads scope="@uiw" packageName="react-shields" href="https://npmjs.com/@uiw/react-shields" />
       <Npm>
         <Npm.Downloads interval="dw" scope="@uiw" packageName="react-github-corners" />
         <Npm.Downloads packageName="hotkeys-js" />
@@ -170,9 +170,9 @@ import Github from '@uiw/react-shields/github';
 export default function Demo() {
   return (
     <>
-      <Github.Issues user="uiwjs" repo="uiw" />
+      <Github.Issues user="uiwjs" repo="uiw" href="https://github.com/uiwjs/react-shields/issues" />
       <Github user="uiwjs" repo="uiw">
-        <Github.Issues type="issues" />
+        <Github.Issues type="issues" href="https://github.com/uiwjs/react-shields/issues" />
         <Github.Issues type="issues-raw" />
         <Github.Issues type="issues-closed" />
         <Github.Issues type="issues-closed-raw" />
@@ -219,7 +219,7 @@ import Github from '@uiw/react-shields/github';
 export default function Demo() {
   return (
     <>
-      <Github.Downloads user="uiwjs" repo="uiw" />
+      <Github.Downloads user="uiwjs" repo="uiw" href="https://github.com/uiwjs/uiw/issues" />
       <Github user="uiwjs" repo="uiw">
         <Github.Downloads />
         <Github.Downloads total={false}/>
@@ -241,9 +241,9 @@ import Github from '@uiw/react-shields/github';
 export default function Demo() {
   return (
     <>
-      <Github.Version user="uiwjs" repo="uiw" />
+      <Github.Version user="uiwjs" repo="uiw" href="https://github.com/uiwjs/uiw/issues" />
       <Github user="uiwjs" repo="uiw">
-        <Github.Version type="version-tag" />
+        <Github.Version type="version-tag" href="https://github.com/uiwjs/uiw/issues" />
         <Github.Version type="package-json" />
         <Github.Version type="package-json" branch="dev" />
         <Github.Version user="jaywcjlove" repo="wxmp" type="manifest-json" />
@@ -265,7 +265,7 @@ import Github from '@uiw/react-shields/github';
 export default function Demo() {
   return (
     <>
-      <Github.License user="uiwjs" repo="uiw" />
+      <Github.License user="uiwjs" repo="uiw" href="https://github.com/uiwjs/uiw/blob/master/LICENSE" />
       <Github user="uiwjs" repo="uiw">
         <Github.License />
       </Github>
@@ -283,7 +283,7 @@ import Github from '@uiw/react-shields/github';
 export default function Demo() {
   return (
     <>
-      <Github.Analysis user="uiwjs" repo="uiw" />
+      <Github.Analysis user="uiwjs" repo="uiw" href="https://github.com/uiwjs/uiw/issues" />
       <Github user="uiwjs" repo="uiw">
         <Github.Analysis type="languages-top" />
         <Github.Analysis type="search" query="github" />
@@ -302,7 +302,7 @@ import Coverage from '@uiw/react-shields/coverage';
 export default function Demo() {
   return (
     <>
-      <Coverage.Coverages user="jaywcjlove" repo="hotkeys" />
+      <Coverage.Coverages user="jaywcjlove" repo="hotkeys" href="https://github.com/uiwjs/uiw/issues" />
       <Coverage user="jaywcjlove" repo="hotkeys">
         <Coverage.Coverages type="github"  />
         <Coverage.Coverages type="github" />
@@ -321,7 +321,7 @@ import Coverage from '@uiw/react-shields/coverage';
 export default function Demo() {
   return (
     <>
-      <Coverage.Codacy projectId="1c524e61cd8640e79b80d406eda8754b" />
+      <Coverage.Codacy projectId="1c524e61cd8640e79b80d406eda8754b" href="https://github.com/uiwjs/uiw/issues" />
       <Coverage user="jaywcjlove" repo="hotkeys">
         <Coverage.Codacy projectId="1c524e61cd8640e79b80d406eda8754b" branch="master" />
         <Coverage.Codacy projectId="1c524e61cd8640e79b80d406eda8754b" />

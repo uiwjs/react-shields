@@ -8,18 +8,7 @@ import Version from './Version';
 import Analysis from './Analysis';
 import Social from './Social';
 
-type GithubComponent = typeof Container & {
-  Issues: typeof Issues;
-  Size: typeof Size;
-  Downloads: typeof Downloads;
-  License: typeof License;
-  Activity: typeof Activity;
-  Analysis: typeof Analysis;
-  Version: typeof Version;
-  Social: typeof Social;
-};
-
-const Github = (props: ContainerProps) => (<Container {...props} />) as unknown as GithubComponent;
+const Github = (props: ContainerProps) => <Container {...props} />;
 
 Github.Issues = Issues;
 Github.Size = Size;

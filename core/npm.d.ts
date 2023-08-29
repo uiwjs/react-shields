@@ -1,13 +1,17 @@
 declare module '@uiw/react-shields/npm' {
-  import Container from '@uiw/react-shields/esm/common/Container';
-  import Version from '@uiw/react-shields/esm/npm/Version';
-  import Size from '@uiw/react-shields/esm/npm/Size';
-  import Downloads from '@uiw/react-shields/esm/npm/Downloads';
-  type NpmComponent = typeof Container & {
-    Version: typeof Version;
-    Size: typeof Size;
-    Downloads: typeof Downloads;
+  import { ContainerProps } from '@uiw/react-shields/esm/common/Container';
+  const Npm: {
+    (props: ContainerProps): import('react/jsx-runtime').JSX.Element;
+    Version: import('react').ForwardRefExoticComponent<
+      import('@uiw/react-shields/esm/npm/Version').VersionProps & import('react').RefAttributes<HTMLImageElement>
+    >;
+    Size: import('react').ForwardRefExoticComponent<
+      import('@uiw/react-shields/esm/npm/Size').SizeProps & import('react').RefAttributes<HTMLImageElement>
+    >;
+    Downloads: import('react').ForwardRefExoticComponent<
+      import('@uiw/react-shields/esm/npm/Downloads').DownloadProps & import('react').RefAttributes<HTMLImageElement>
+    >;
+    displayName: string;
   };
-  const Npm: NpmComponent;
   export default Npm;
 }

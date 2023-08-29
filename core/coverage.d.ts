@@ -1,11 +1,16 @@
 declare module '@uiw/react-shields/coverage' {
-  import Container from '@uiw/react-shields/esm/common/Container';
-  import Coverages from '@uiw/react-shields/esm/coverages/Coverages';
-  import Codacy from '@uiw/react-shields/esm/coverages/Codacy';
-  type CoverageComponent = typeof Container & {
-    Coverages: typeof Coverages;
-    Codacy: typeof Codacy;
+  import { ContainerProps } from '@uiw/react-shields/esm/common/Container';
+
+  const Coverage: {
+    (props: ContainerProps): import('react/jsx-runtime').JSX.Element;
+    Coverages: import('react').ForwardRefExoticComponent<
+      import('@uiw/react-shields/esm/coverages/Coverages').CoveragesProps &
+        import('react').RefAttributes<HTMLImageElement>
+    >;
+    Codacy: import('react').ForwardRefExoticComponent<
+      import('@uiw/react-shields/esm/coverages/Codacy').CodacyProps & import('react').RefAttributes<HTMLImageElement>
+    >;
+    displayName: string;
   };
-  const Coverage: CoverageComponent;
   export default Coverage;
 }

@@ -1,6 +1,6 @@
 {
   "name": "@uiw/react-shields",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Shields.io for react component, Quality metadata badges for open source projects.",
   "author": "Kenny Wong <wowohoo@qq.com>",
   "license": "MIT",

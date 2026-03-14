@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/static/css/main.4560aa6b.css",
-    "main.js": "/static/js/main.841353b7.js",
-    "refractor-vendor.js": "/static/js/refractor-vendor.4a2775d6.js",
-    "parse5-vendor.js": "/static/js/parse5-vendor.438b4659.js",
-    "uiw-vendor.js": "/static/js/uiw-vendor.de5b1644.js",
-    "react-vendor.js": "/static/js/react-vendor.b442fa79.js",
+    "main.js": "/static/js/main.c572b984.js",
+    "refractor-vendor.js": "/static/js/refractor-vendor.ea8c4b97.js",
+    "parse5-vendor.js": "/static/js/parse5-vendor.a815f71c.js",
+    "uiw-vendor.js": "/static/js/uiw-vendor.7b8f2ab8.js",
+    "react-vendor.js": "/static/js/react-vendor.82816ae3.js",
     "index.html": "/index.html",
     "main.4560aa6b.css.map": "/static/css/main.4560aa6b.css.map",
-    "main.841353b7.js.map": "/static/js/main.841353b7.js.map",
-    "refractor-vendor.4a2775d6.js.map": "/static/js/refractor-vendor.4a2775d6.js.map",
-    "parse5-vendor.438b4659.js.map": "/static/js/parse5-vendor.438b4659.js.map",
-    "uiw-vendor.de5b1644.js.map": "/static/js/uiw-vendor.de5b1644.js.map",
-    "react-vendor.b442fa79.js.map": "/static/js/react-vendor.b442fa79.js.map"
+    "main.c572b984.js.map": "/static/js/main.c572b984.js.map",
+    "refractor-vendor.ea8c4b97.js.map": "/static/js/refractor-vendor.ea8c4b97.js.map",
+    "parse5-vendor.a815f71c.js.map": "/static/js/parse5-vendor.a815f71c.js.map",
+    "uiw-vendor.7b8f2ab8.js.map": "/static/js/uiw-vendor.7b8f2ab8.js.map",
+    "react-vendor.82816ae3.js.map": "/static/js/react-vendor.82816ae3.js.map"
   },
   "entrypoints": [
-    "static/js/refractor-vendor.4a2775d6.js",
-    "static/js/parse5-vendor.438b4659.js",
-    "static/js/uiw-vendor.de5b1644.js",
-    "static/js/react-vendor.b442fa79.js",
+    "static/js/refractor-vendor.ea8c4b97.js",
+    "static/js/parse5-vendor.a815f71c.js",
+    "static/js/uiw-vendor.7b8f2ab8.js",
+    "static/js/react-vendor.82816ae3.js",
     "static/css/main.4560aa6b.css",
-    "static/js/main.841353b7.js"
+    "static/js/main.c572b984.js"
   ]
 }
